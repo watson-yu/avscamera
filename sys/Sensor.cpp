@@ -356,7 +356,7 @@ CreateSynthesizer(
 
     if( NT_SUCCESS( Status ) )
     {
-        DBG_TRACE( "Setting Mounting Orientation to %d°", DbgRotation2Degrees(m_MountingOrientation) )
+        DBG_TRACE( "Setting Mounting Orientation to %d", DbgRotation2Degrees(m_MountingOrientation) )
         m_Synthesizer[ Pin->Id ]->SetRotation( m_MountingOrientation );
     }
 
