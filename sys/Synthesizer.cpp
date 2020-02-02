@@ -1268,6 +1268,21 @@ Return Value:
     // Generate a "time stamp" just to overlay it onto the capture image.
     // It makes it more exciting than bars that do nothing.
     //
+    if (1) {
+        BYTE randR = (BYTE)GetRandom((LONG)128, 192);
+        BYTE randG = (BYTE)GetRandom((LONG)128, 192);
+        BYTE randB = (BYTE)GetRandom((LONG)128, 192);
+        GetImageLocation(0, 0);
+        PKS_RGBQUAD& pPixel = (PKS_RGBQUAD&)m_Cursor;
+        for (ULONG line = 0; line < m_Height; line++) {
+            for (ULONG x = 0; x < m_Width; x++) {
+                *pPixel = CKsRgbQuad(randR, randG, randB);
+                pPixel++;
+            }
+        }
+        return STATUS_SUCCESS;
+    }
+
     SynthesizeBars();
 
     ApplyGradient( (m_Height)/16, RED);
