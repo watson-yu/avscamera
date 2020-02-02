@@ -76,8 +76,11 @@ Initialize()
     static
     CSensorContext Context[] =
     {
-        { L"RFC", &AvsCameraFilterDescriptor,    AcpiPldPanelBack, AcpiPldRotation0 },
-        { L"FFC", &AvsCameraFilterDescriptorFFC, AcpiPldPanelFront, AcpiPldRotation90 }
+        /* Rear-facing Camera */
+        { L"RFC", &AvsCameraFilterDescriptor,    AcpiPldPanelBack, AcpiPldRotation0 }
+
+        /* Front-facing Camera */
+        /*, { L"FFC", &AvsCameraFilterDescriptorFFC, AcpiPldPanelFront, AcpiPldRotation90 }*/
     };
 
     m_FilterDescriptorCount = SIZEOF_ARRAY(Context);

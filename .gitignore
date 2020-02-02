@@ -1,5 +1,8 @@
 .vs/
+mft0/*.vcxproj.user
 mft0/x64/
+Package/*.VcxProj.user
 Package/x64/
+sys/*.vcxproj.user
 sys/x64/
 x64/
